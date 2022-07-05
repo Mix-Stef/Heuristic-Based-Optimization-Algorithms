@@ -94,7 +94,7 @@ class Harmony_Search:
                         self.memory[i] = x_new
                         break
             t += 1
-            print('Epoch: {} --- State: {} --- Objective: {}'.format(t, self.memory[-1],self.objective(self.memory[-1])))
+            print('Epoch: {} --- State: {} --- Objective: {:.2f}'.format(t, np.round(self.memory[-1], 2), self.objective(self.memory[-1])))
 
 a = Harmony_Search(objective=objective_function, HMS=30, MI=40000)
 a.searching_algorithm()
